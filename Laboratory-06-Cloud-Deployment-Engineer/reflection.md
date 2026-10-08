@@ -1,0 +1,11 @@
+# Reflection
+
+Creating a `docker-compose.yml` file makes the work of a cloud engineer much easier compared to entering Docker commands manually. The entire application setup, including containers, environment variables, ports, and dependencies, can be placed in one organized file. Instead of writing separate `docker run` commands for every container, a single command can start the complete application. The Compose file can also serve as documentation and can be saved, shared, version-controlled, and reused in different environments.
+
+YAML indentation is very important when creating a Docker Compose file. For example, using a Tab instead of spaces or having inconsistent indentation can cause the configuration to fail. Docker Compose may return a syntax error and prevent the containers from starting because YAML uses indentation to determine the relationship between different settings and services. This showed me the importance of being careful when writing configuration files.
+
+We used environment variables such as `MYSQL_PASSWORD` to avoid placing sensitive information directly into the application configuration. This makes credentials easier to manage and allows the same Docker image to be used in different environments by changing the required variables. It also helps prevent sensitive information from being accidentally included in version control when values are stored in an external `.env` file.
+
+Being able to deploy a working cloud storage system in only a few minutes gave me a better understanding of how cloud engineers work. The Compose file handled most of the setup needed for a private cloud storage solution similar to Google Drive. This demonstrated how Infrastructure as Code can simplify complex infrastructure tasks.
+
+Since Mission 1, my understanding of cloud computing has changed significantly. I initially thought of cloud computing simply as "someone else's computer," but I now understand that it involves creating infrastructure that can be automated, repeated, and managed efficiently. From setting up virtual machines and managing storage to deploying multiple connected containers, I have learned how cloud infrastructure can be managed through code instead of relying entirely on manual pro
