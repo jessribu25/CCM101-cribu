@@ -1,0 +1,13 @@
+# Reflection
+
+Automation becomes essential once you manage hundreds of cloud servers, because doing things by hand doesn't scale. A task that takes one minute on a single server turns into hours of repetitive, error-prone work across a whole fleet. A script written once can run immediately and identically on every machine, while a person retyping the same commands will eventually make a typo or skip a step.
+
+The danger of automation comes from the same thing that makes it powerful: scale. If an administrator makes a mistake while manually updating one server, only that server breaks. If the same mistake is built into a script scheduled across 1,000 servers, it runs perfectly and instantly everywhere at once, so a small human error becomes a large outage within seconds. Knight Capital Group learned this in 2012, when a faulty automated deployment cost the company roughly $460 million in about 45 minutes.
+
+Writing a Bash script felt like traditional, linear programming, with variables and commands running from top to bottom on a single machine. The Docker Compose YAML file in Mission 6 was different because it was declarative rather than procedural. Instead of listing step-by-step instructions, I described the end state I wanted for a multi-container system, including which images to run, how they connect, and which environment variables they need, and Docker worked out how to make it real.
+
+Looking back at my GitHub repository from Laboratory 1 through Laboratory 9, my view of cloud computing has changed. I used to think of "the cloud" as a remote place to store files. Now I see it as a full discipline that covers provisioning infrastructure, deploying containers, managing data, securing a server with a firewall, monitoring its health, and now automating its routine maintenance. Each lab built directly on the skills from the one before it.
+
+Of all the roles, I enjoyed being the Automation Engineer the most. In this lab I wrote a simple script, hit a "Permission denied" error on my first run, and fixed it with `chmod +x`. Then I watched a timestamped `.tar.gz` backup appear in my `backups` folder. What made it satisfying was setting the cron entry `0 2 * * *` and knowing the backup would now run every night at 2:00 AM whether or not I was awake. It showed me how a few lines of code can replace a task someone would otherwise have to remember to do every day.
+
+I chose Automation Engineer because this lab is the one we worked on together, so change it if another role was your real favorite. Also, most sources put Knight Capital's loss at about $440 million, so you may want to double-check the $460 million figure before submitting.
